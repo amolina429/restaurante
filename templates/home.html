@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="menu-section">
+    <h2 class="text-center mb-5">Nuestro Menú</h2>
+    
+    <!-- Navegación entre categorías -->
+    <div class="category-nav text-center mb-4">
+        {% for categoria in categorias %}
+        <a href="#{{ categoria.nombre|slugify }}" class="btn btn-outline-primary mx-2">
+            <i class="fas fa-{{ categoria.icono }}"></i> {{ categoria.nombre }}
+        </a>
+        {% endfor %}
+    </div>
+    
+    <!-- Sección por categorías -->
+    {% for categoria, platos in platos_por_categoria.items %}
+    <div class="category-section mb-5" id="{{ categoria.nombre|slugify }}">
+        <h3 class="category-title">
+            <i class="fas fa-{{ categoria.icono }}"></i> {{ categoria.nombre }}
+        </h3>
+        
+        <div class="row">
+            {% for plato in platos %}
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="{{ plato.imagen.url }}" class="card-img-top" alt="{{ plato.nombre }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ plato.nombre }}</h5>
+                        <p class="card-text text-muted">{{ plato.descripcion }}</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">${{ plato.precio }}</span>
+                            <button class="btn btn-sm btn-outline-success add-to-cart" 
+                                    data-plato-id="{{ plato.id }}">
+                                <i class="fas fa-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

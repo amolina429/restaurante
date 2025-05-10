@@ -1,0 +1,6 @@
+<header class="site-header">
+    {% if user.is_authenticated %}
+      <h3>¡Bienvenido, {{ user.username }}!</h3>
+    {% endif %}
+    {% include 'includes/navigation.html' %}
+</header>

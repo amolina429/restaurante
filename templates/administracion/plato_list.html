@@ -1,0 +1,53 @@
+{% extends 'administracion/base_administracion.html' %}
+
+{% block administracion_content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h3>Listado de Platos</h3>
+        <a href="{% url 'plato-create' %}" class="btn btn-success">
+            <i class="fas fa-plus"></i> Nuevo Plato
+        </a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Disponible</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for plato in platos %}
+                <tr>
+                    <td>{{ plato.nombre }}</td>
+                    <td>{{ plato.categoria }}</td>
+                    <td>${{ plato.precio }}</td>
+                    <td>
+                        {% if plato.disponible %}
+                        <span class="badge bg-success">Sí</span>
+                        {% else %}
+                        <span class="badge bg-danger">No</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'plato-update' plato.pk %}" class="btn btn-sm btn-primary">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="{% url 'plato-delete' plato.pk %}" class="btn btn-sm btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center">No hay platos registrados</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

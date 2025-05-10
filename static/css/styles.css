@@ -1,0 +1,301 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.site-header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #34495e;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    padding: 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: #f39c12;
+}
+
+main {
+    padding: 2rem;
+    min-height: 80vh;
+}
+
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos específicos */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.service {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+/* Estilos para el login */
+.auth-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box, .welcome-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h3, .welcome-box h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.inline-login .form-group {
+    margin-bottom: 1rem;
+}
+
+.inline-login input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.alert-danger {
+    color: #e74c3c;
+    padding: 0.5rem;
+    background: #fadbd8;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+/* Estilos para el menú */
+.menu-section {
+    padding: 2rem 0;
+}
+
+.category-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+.add-to-cart {
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+}
+
+.category-nav {
+    margin-bottom: 2rem;
+}
+/* Estilos para el navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #1a1a1a !important; /* Fondo más oscuro */
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #f8f9fa !important;
+    transform: translateY(-2px);
+}
+
+.dropdown-item:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Efecto para el dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* En tu archivo styles.css */
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 1.25rem;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}
+/* Estilos para los formularios de platos */
+.plato-form {
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.plato-form:hover {
+    background-color: #e9ecef;
+}
+
+.remove-plato {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.remove-plato:hover {
+    opacity: 1;
+}
+
+#platos-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Estilo para campos requeridos */
+label.required:after {
+    content: " *";
+    color: #dc3545;
+}

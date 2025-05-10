@@ -1,0 +1,21 @@
+{% extends 'administracion/base_administracion.html' %}
+
+{% block administracion_content %}
+<div class="card">
+    <div class="card-header">
+        <h3>{% if object %}Editar{% else %}Crear{% endif %} Categoría</h3>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Guardar
+            </button>
+            <a href="{% url 'categoria-list' %}" class="btn btn-secondary">
+                <i class="fas fa-times"></i> Cancelar
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

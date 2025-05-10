@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Nuestros Servicios</h2>
+    
+    <div class="row">
+        <!-- Servicio en Mesa -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h4><i class="fas fa-utensils me-2"></i>Servicio en Mesa</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Disfruta de nuestros platos en el restaurante</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Elige tu mesa</li>
+                        <li class="list-group-item">Selecciona tus platos</li>
+                        <li class="list-group-item">Atendido por meseros</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'mesa-create' %}" class="btn btn-primary w-100">
+                        <i class="fas fa-chair me-1"></i> Pedir en Mesa
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Domicilio -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h4><i class="fas fa-motorcycle me-2"></i>Domicilio</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Recibe tus pedidos en la comodidad de tu hogar</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Entrega a domicilio</li>
+                        <li class="list-group-item">Pago contra entrega</li>
+                        <li class="list-group-item">Rápido y seguro</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'domicilio-create' %}" class="btn btn-success w-100">
+                        <i class="fas fa-home me-1"></i> Pedir a Domicilio
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recoger en Tienda -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-warning text-dark">
+                    <h4><i class="fas fa-shopping-bag me-2"></i>Recoger en Tienda</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Recoge tu pedido en nuestro restaurante</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Pide y recoge</li>
+                        <li class="list-group-item">Sin costo adicional</li>
+                        <li class="list-group-item">Preparado al momento</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'recoger-create' %}" class="btn btn-warning w-100">
+                        <i class="fas fa-store me-1"></i> Pedir para Recoger
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
